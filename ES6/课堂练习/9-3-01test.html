@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Random Numbers</h1>
+    <hr>
+    <script>
+        var a = [];
+
+        function getRandom(a, b) {
+            return Math.floor((Math.random() * b - a + 1));
+        }
+        for (let i = 0; i < 10; i++) {
+            a.push(getRandom(0, 100));
+        }
+        console.log(a);
+        document.write(a.sort());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        面对对象编程
+    </title>
+</head>
+
+<body>
+    <script>
+        class Car {
+            constructor(sName, sColor, iDoors) {
+                // 只读属性
+                this._name = sName;
+                this.color = sColor;
+                this.doors = iDoors;
+            };
+
+
+            //访问器属性，get,set
+            //使用的时候以访问属性的方式来访问
+            get desc() {
+                return `${this.name} is worth having!`;
+            }
+            get name() {
+                return this._name;
+            }
+            set name(value) {
+                this._name = value;
+            }
+            showColor() {
+                document.write(`Color of the car is ${this.color}.<br>`);
+            }
+            showDoor() {
+                document.write(`Door of the car is ${this.doors}.\n`)
+            }
+
+            // 静态方法
+            static createDefault() {
+                return new Car("Benz", 'red', 'swing');
+            }
+        }
+        let benz = Car.createDefault();
+        benz.showColor();
+
+        // let tesla = new Car("Tesla Model 3", "red", "swing");
+        document.write(benz.desc + "<br>");
+        // document.write(tesla["name"] + "<br>");
+        // tesla.showColor();
+        // tesla.showDoor();
+    </script>
+</body>
+
+</html>

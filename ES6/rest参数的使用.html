@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest参数的使用</title>
+</head>
+
+<body>
+    <!-- 
+        对比arguments对象的使用 
+         谢谢 Note: “Array-like” means that arguments has a length property and
+         properties indexed from zero, but it doesn't have Array's built-in methods like forEach() and map(). 
+         See §Description for details.
+    -->
+    <script>
+        //函数定义时候，并没有设置接受传入参数的变量
+        function test() {
+            // 函数会将接受的参数全部传入arguments对象中
+            for (let i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+            }
+            console.log(arguments);
+        }
+        //传入变量呗保存在arguments当中
+        test(1, 23, 4, 'suck');
+        // console.log(test.arguments);
+    </script>
+    <!-- 使用规则：只能在参数列表的最后面使用 setColor(...data) -->
+    <!-- <script>
+        function calculate(op, ...data) {
+            if (op === "+") {
+                let result = 0;
+                for (let i = 0; i < data.length; i++) {
+                    result += data[i];
+                }
+
+                return result;
+            } else if (op === "*") {
+                let result = 1;
+                for (let i = 0; i < data.length; i++) {
+                    result *= data[i];
+                }
+                return result;
+            }
+        }
+        alert(calculate("+", 12, 123, 123123, 12312, 2131, 2312, 3, 12, 31));
+    </script> -->
+</body>
+
+</html>

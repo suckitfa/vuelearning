@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模版字符串</title>
+</head>
+
+<body>
+    <script>
+        // let message = "Hello \n \
+        // World";
+        // let greeting = "Welcome" +
+        //     "you";
+        // console.log(message);
+        // console.log(greeting);
+
+
+        // 反双引号:
+        // 反双引号内所有的空白字符都属于字符串的一部分
+        // let message = `Hello        
+
+
+        // world`;
+        // console.log(message)
+
+        // 占位符 ${变量名}
+        let name = "zhangsan";
+        let message = `Hello,${name}`;
+        console.log(message);
+        let amount = 5;
+        let price = 86.5;
+        let total = `The total price is ${amount*price}`;
+        console.log(total);
+        //模版字符串本身也是表达式
+        let name2 = "Lsi";
+        let message2 = `Hello,${`my name is ${name2}`}.`;
+        console.log(message2);
+    </script>
+</body>
+
+</html>

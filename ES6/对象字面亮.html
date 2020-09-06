@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+        // 属性初始值的简写:只有同名的时候才可以这样干
+        let color = "red";
+        let doors = "swing door";
+        let car = {
+            // 对象的属性名与本地的变量同名的时候，可以简写
+            // 只写属性名
+            color,
+            doors,
+            //function关键字可以不写
+            test() {
+                console.log("Hello world");
+            },
+            //可以使用方括号来搞定属性的定义和访问
+            ["first name"]: "san",
+            ["last name"]: "zhang"
+        }
+
+        console.log(car["first name"]);
+    </script>
+</body>
+
+</html>

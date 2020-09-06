@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Cards</title>
+    <style>
+        body,
+        ul,
+        li,
+        div,
+        main {
+            margin: 0;
+            padding: 0;
+        }
+        
+        main {
+            margin-left: 34px;
+        }
+        
+        ul {
+            list-style: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .container>ul>li {
+            width: 100px;
+            height: 180px;
+            border: 1px solid #000;
+            float: left;
+            margin-right: 30px;
+            line-height: 180px;
+            text-align: center;
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        .card:hover {
+            border: 1px dashed red;
+            background-color: lightgreen;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Random Cards</h1>
+        <hr>
+
+        <div class="container clearfix">
+            <ul>
+                <li class="card"></li>
+                <li class="card"></li>
+                <li class="card"></li>
+                <li class="card"></li>
+            </ul>
+        </div>
+
+    </main>
+    <script>
+        window.onload = function() {
+            //该函数生成随机函数
+            let getRamdom = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+            let cards = document.getElementsByClassName("card");
+            for (let i = 0; i < cards.length; i++) {
+                cards[i].textContent = getRamdom(1, 10);
+            }
+        }
+    </script>
+</body>
+
+</html>

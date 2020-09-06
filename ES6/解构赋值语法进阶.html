@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解构语法</title>
+</head>
+
+<body>
+    <script>
+        // 结构赋值：从对象或者数组中赋值给变量
+        let book = {
+            title: "Vue.js 从入门到实战",
+            isbn: "9787121362217",
+            price: 98,
+            category: {
+                id: 1,
+                name: "web前端"
+            }
+        }
+
+        //对象的结构赋值
+        let {
+            // 变量的名称在冒号的右边，而左边则是要读取的对象的属性名
+            title: bookTitle,
+            isbn: bookIsbn,
+            category: {
+                name: category,
+                id: serial
+            }
+        } = book;
+        console.log("bookTitle " + bookTitle);
+        console.log("bookIsbn " + bookIsbn);
+        console.log("category " + category);
+        console.log("serial " + serial);
+    </script>
+</body>
+
+</html>

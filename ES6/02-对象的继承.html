@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>继承</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(name) {
+                this.name = name;
+            }
+
+            work() {
+                document.write("<h1>wokring.....</h1>")
+            }
+        }
+        class Student extends Person {
+            constructor(name, no) {
+                super(name);
+                this.no = no;
+            };
+            work() {
+                document.write("<h1>studying...</h1>");
+            }
+        }
+
+        let stu = new Student("Bob", 1);
+        stu.work();
+    </script>
+</body>
+
+</html>

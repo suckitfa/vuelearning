@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象和数组的解构赋值</title>
+</head>
+
+<body>
+    <!-- <script>
+        //对象的属性解构赋值
+        let book = {
+                title: "Vue.js 从入门到实战",
+                isbn: "9787121362217",
+                price: 98
+            }
+            // 对象的解构赋值
+            // 解构变量名与对象中的属性名相同
+            // let {
+            //     title,
+            //     isbn,
+            //     price
+            // } = book;
+
+
+        // 解构时候变量名与对象的属性名不相同的时候
+        let {
+            // 冒号左边为对象的属性名，右边为自己定义的变量名
+            title: bookTitle,
+            isbn,
+            price: bookPrice
+        } = book;
+        console.log("bookTitle = " + bookTitle);
+        console.log("isbn = " + isbn);
+        console.log("bookPrice = " + bookPrice);
+
+
+
+        // 给变量赋值的同时传入参数
+        // function outputBookInfo(book) {
+        //     console.log(book);
+        // }
+        // let title, isbn;
+        // outputBookInfo({
+        //     title,
+        //     isbn
+        // } = book);
+        // console.log(title);
+        // console.log(isbn);
+    </script> -->
+    <script>
+        // 数组的解构:
+        // 对应位置的解构 
+        let arr1 = [1, 2, 3];
+        let [first, second, third] = arr1;
+        let [, , last] = arr1;
+        console.log("last =  " + last);
+        console.log("first = " + first);
+        console.log("second = " + second);
+        console.log("third = " + third);
+    </script>
+
+
+    <script>
+        // 嵌套解构
+        let book2 = {
+            title: "Vue.js从入门到实战",
+            isbn: "9787121362217",
+            price: 98,
+            //嵌套了一个对象
+            category: {
+                id: 1,
+                name: "前端框架"
+            }
+        }
+        let {
+            title,
+            isbn,
+            price,
+            category: {
+                name: bookClass
+            }
+        } = book2;
+        document.write("图书的类别： " + bookClass);
+    </script>
+</body>
+
+</html>

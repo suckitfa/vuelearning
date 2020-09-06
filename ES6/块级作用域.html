@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>块级作用域</title>
+</head>
+
+<body>
+    <!-- <script>
+        function changeColor(flag) {
+            if (flag) {
+                let color = "red";
+            } else {
+                console.log(color);
+                return null;
+            }
+        }
+        changeColor(false);
+    </script> -->
+    <script>
+        let greeting = "Welcome";
+        console.log(window.greeting);
+        console.log(window.Screen);
+        const Screen = "liquid crystal";
+        console.log(window.Screen);
+        console.log(Screen);
+    </script>
+</body>
+
+</html>

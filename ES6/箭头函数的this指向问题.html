@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-- <script>
+        var greeting = "Welcome";
+
+        function sayHello(user) {
+            alert(this.greeting + ", " + user);
+        }
+        var obj = {
+            greeting: "Hello from obj",
+            sayHello: sayHello
+        }
+
+        var sayHi = obj.sayHello.bind(obj);
+        // sayHi("Bob") //Hello from obj,Bob
+
+
+
+        var obj = {
+            greeting: "Hello",
+            sayHello: function() {
+                setTimeout(function() {
+                    alert(this.greeting);
+                }.bind(this), 1000);
+            },
+            sayHi: function() {
+                let that = this;
+                //将obj暂时保存在that中
+                setTimeout(function() {
+                    alert(that.greeting);
+                }, 1000);
+            }
+        }
+        obj.sayHi();
+    </script> -->
+    <script>
+        // 箭头函数的this指向第一个非箭头函数
+        // 而且不能通过call,bind,apply更改
+    </script>
+</body>
+
+</html>

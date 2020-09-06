@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数</title>
+</head>
+
+<body>
+    <!-- <script>
+        let test = function() {
+            console.log("Hello");
+        }
+        test();
+
+        // 箭头函数的申明：
+        // (参数)=>{
+        //      函数体
+        // }
+        let test2 = () => {
+            console.log("Hello ");
+        }
+
+        test2();
+
+        let welcome = () => "Welcome";
+        console.log(welcome());
+    </script> -->
+    <!-- <script>
+        let welcome = msg => msg;
+        // alert(welcome("This class sucks!"));
+
+        let welcome2 = (user, msg) => `${user},${msg}`;
+        alert(welcome2('Bob', 'You are a sucker!'));
+    </script> -->
+    <script>
+        // 箭头函数和对象解构的结合
+        let personInfo = ({
+            name,
+            age
+        }) => `${name}'s age is ${age}`;
+        let person = {
+            name: "bob",
+            age: 18
+        }
+        console.log(personInfo(person));
+    </script>
+</body>
+
+</html>
